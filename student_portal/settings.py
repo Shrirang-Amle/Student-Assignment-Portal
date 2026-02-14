@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-a7ewihm#6cvz7+8e+iel(d$n9=2+&v#6k@t$o#+p%(0sx#dw_w
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['https://student-assignment-portal.vercel.app/']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 
