@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Submitted Assignments</h2>
+
+{% if username %}
+    <p>Welcome, <strong>{{ username }}</strong></p>
+{% endif %}
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Document</th>
+        <th>Submitted At</th>
+    </tr>
+
+    {% for assignment in assignments %}
+    <tr>
+        <td>{{ assignment.name }}</td>
+        <td>{{ assignment.title }}</td>
+        <td>
+            <a href="{{ assignment.document.url }}" target="_blank">
+                View File
+            </a>
+        </td>
+        <td>{{ assignment.submitted_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

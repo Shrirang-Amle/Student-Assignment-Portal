@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Set Your Preferences</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    <label>Theme:</label><br>
+    <select name="theme">
+        <option value="Light">Light</option>
+        <option value="Dark">Dark</option>
+    </select><br><br>
+
+    <label>Preferred Subject:</label><br>
+    <input type="text" name="subject" placeholder="Enter subject"><br><br>
+
+    <button type="submit">Save Preferences</button>
+</form>
+
+{% endblock %}
