@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-a7ewihm#6cvz7+8e+iel(d$n9=2+&v#6k@t$o#+p%(0sx#dw_w
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['your-app-name.vercel.com']
+ALLOWED_HOSTS = ['https://student-assignment-portal.vercel.app/']
 
 
 
@@ -126,4 +127,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
